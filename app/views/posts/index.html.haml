@@ -1,5 +1,8 @@
 - @posts.each do |post|
   = link_to (image_tag post.image.variant(resize: "350x250")), post
   %h2= link_to post.title, post
+  %p
+    = pluralize(post.comments.count, "Comment")
+    
   
 = link_to "Add New Inspiration", new_post_path
