@@ -1,3 +1,6 @@
+= image_tag @post.image.variant(resize: "700x500")
+//= image_tag @post.image.variant(resize: "350x250")
+
 %h1= @post.title
 %p= @post.link
 %p= simple_format(@post.description)
