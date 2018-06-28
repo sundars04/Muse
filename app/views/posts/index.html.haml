@@ -1,10 +1,33 @@
-- @posts.each do |post|
-  = link_to (image_tag post.image.variant(resize: "350x250")), post
-  %h2= link_to post.title, post
-  %p
-    = pluralize(post.comments.count, "Comment")
-  %p
-    = pluralize(post.get_likes.size, "Like")
-    
-  
-= link_to "Add New Inspiration", new_post_path
+- if user_signed_in?
+  %p#intro
+    Aloha
+    = current_user.name
+    %br/
+    %span
+      Share your posts and see what others are sharing.
+- else
+  %p#intro
+    What's your Muse?
+    %br/
+    %span
+      Share your posts and see what others are sharing.
+
+#posts
+  - @posts.each do |post|
+    .post
+      .post_image
+        = link_to (image_tag post.image.variant(resize: "350x250")), post
+      .post_content
+        .title        
+          %h2= link_to post.title, post
+        .data.clearfix
+          %p.username
+            Shared by
+            = post.user.name
+          %p.buttons
+            %span
+              %i.far.fa-comments
+              = pluralize(post.comments.count, "Comment")
+            %span
+              %i.far.fa-thumbs-up
+              = pluralize(post.get_likes.size, "Like")
