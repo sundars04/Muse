@@ -21,6 +21,7 @@ gem 'paperclip', '~> 6.0'
 gem 'mini_magick'
 gem 'bootstrap-sass'
 gem 'jquery-rails'
+gem 'acts_as_votable', '~> 0.11.1'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

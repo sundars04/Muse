@@ -3,6 +3,8 @@
   %h2= link_to post.title, post
   %p
     = pluralize(post.comments.count, "Comment")
+  %p
+    = pluralize(post.get_likes.size, "Like")
     
   
 = link_to "Add New Inspiration", new_post_path
