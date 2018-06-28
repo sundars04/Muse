@@ -24,6 +24,7 @@ gem 'jquery-rails'
 gem 'acts_as_votable', '~> 0.11.1'
 gem 'font-awesome-sass'
 gem 'normalize-rails'
+gem 'image_processing', '~> 1.2'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

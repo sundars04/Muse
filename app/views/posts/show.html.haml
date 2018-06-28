@@ -11,12 +11,9 @@
       .description= simple_format(@post.description)
     .post_data
       = link_to "Visit Link", @post.link, class: "button"
-      = link_to like_post_path(@post), method: :get, class: "data" do
-        %i.far.fa-thumbs-up
-        = pluralize(@post.get_upvotes.size, "Like")
-      = link_to dislike_post_path(@post), method: :get, class: "data" do
-        %i.far.fa-thumbs-down
-        = pluralize(@post.get_downvotes.size, "Dislike")
+      .data
+        #likes
+          = render 'likes'
       %p.data
         %i.far.fa-comments
         = pluralize(@post.comments.count, "Comment")
@@ -42,8 +39,8 @@
                   %i.far.fa-comments
                   = pluralize(@random_post.comments.count, "Comment")
                 %span
-                  %i.far.fa-thumbs-up
-                  = pluralize(@random_post.get_likes.size, "Like")    
+                  %i.fas.fa-heart
+                  = pluralize(@random_post.likes.size, "Like")                  
 
 #comments
   %h3.comment_count= pluralize(@post.comments.count, "Comment")

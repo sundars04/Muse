@@ -1,0 +1,8 @@
+- if user_signed_in? && current_user.likes?(@post)
+  = link_to post_like_path(@post), method: :delete, remote: true do
+    %i.fas.fa-heart
+- else
+  = link_to post_like_path(@post), method: :post, remote: true do
+    %i.far.fa-heart
+
+= pluralize(@post.likes.count, "Like")

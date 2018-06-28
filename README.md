@@ -7,13 +7,14 @@ devices. Add code for random post, else will throw an error with a fresh databas
 
 Further changes to be made is
 
-* Use js for acts as votable, so no more page refresh when a like or dislike.
-
 * Use of Devise confirmable so that it can be used in heroku.
 
 * Add Google cloud storage for Heroku.
 
 Things to keep in mind:
+
+* While creating this application, there has been numerous issues with Active Storage. 
+I have issues with resizing images If I follow the documentation provided by Ruby
 
 * Ruby version - 2.4.1
 
@@ -21,16 +22,16 @@ Things to keep in mind:
 
 * Additional gems used - 
 
-gem 'haml',
-gem 'simple_form',
-gem 'devise',
-gem 'paperclip',
-gem 'mini_magick',
-gem 'bootstrap-sass',
-gem 'jquery-rails',
-gem 'acts_as_votable',
-gem 'font-awesome-sass',
-gem 'normalize-rails'
+⋅⋅⋅gem 'haml',
+⋅⋅⋅gem 'simple_form',
+⋅⋅⋅gem 'devise',
+⋅⋅⋅gem 'paperclip',
+⋅⋅⋅gem 'mini_magick',
+⋅⋅⋅gem 'bootstrap-sass',
+⋅⋅⋅gem 'jquery-rails',
+⋅⋅⋅gem 'acts_as_votable',
+⋅⋅⋅gem 'font-awesome-sass',
+⋅⋅⋅gem 'normalize-rails'
 
 * Configuration - You will need to have Ruby and rails installed on your system or IDE prior to trying this application.
 Please refer to RVM guides or Ruby installation process for your OS. 

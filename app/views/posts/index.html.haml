@@ -29,5 +29,5 @@
               %i.far.fa-comments
               = pluralize(post.comments.count, "Comment")
             %span
-              %i.far.fa-thumbs-up
-              = pluralize(post.get_likes.size, "Like")
+              %i.fas.fa-heart
+              = pluralize(post.likes.size, "Like")
