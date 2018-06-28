@@ -24,6 +24,7 @@
 body {
 	font-family: "Proxima Nova";
 	font-weight: 100;
+  padding-top: 10px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -80,4 +81,18 @@ header {
 			}
 		}
 	}
+}
+
+#notice_wrapper {
+  width: 100%;
+  position:inherit;
+  background: rgb(166, 166, 166);
+  z-index: 999;
+  p {
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.25rem;
+    padding: 1.5rem 0;
+  }
 }
