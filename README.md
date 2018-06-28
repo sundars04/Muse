@@ -21,15 +21,15 @@ Things to keep in mind:
 
 * Additional gems used - 
 
-gem 'haml', '~> 5.0', '>= 5.0.4'
-gem 'simple_form', '~> 4.0', '>= 4.0.1'
-gem 'devise', '~> 4.4', '>= 4.4.3'
-gem 'paperclip', '~> 6.0'
-gem 'mini_magick'
-gem 'bootstrap-sass'
-gem 'jquery-rails'
-gem 'acts_as_votable', '~> 0.11.1'
-gem 'font-awesome-sass'
+gem 'haml',
+gem 'simple_form',
+gem 'devise',
+gem 'paperclip',
+gem 'mini_magick',
+gem 'bootstrap-sass',
+gem 'jquery-rails',
+gem 'acts_as_votable',
+gem 'font-awesome-sass',
 gem 'normalize-rails'
 
 * Configuration - You will need to have Ruby and rails installed on your system or IDE prior to trying this application.
